@@ -57,7 +57,7 @@
 			</div>
 		</nav>
 
-		<div class="container h-100">
+		<div class="container">
 			<div class="content h-100">
 				<div>
 					<h5
@@ -70,11 +70,17 @@
 					<div class="collapse" id="collapseTarget1">
 						<div class="card card-body">
 							<ul>
-								<li>Why do we need JavaScript ?</li>
-								<li>Compilation and Execution</li>
-								<li>First Program</li>
-								<li>Data Types</li>
-								<li>Variables</li>
+								<li>Expressions</li>
+								<li>Mathematical Operators and Precendence</li>
+								<li>Relational / Logical Operatores</li>
+								<li>If-Else Statements - Part 1</li>
+								<li>Introduction to Functions - Part 1</li>
+								<ul>
+									<li>Paramentric & Non-Parametric</li>
+									<li>Calling a Function</li>
+									<li>Returning Values</li>
+								</ul>
+								<li>Introduction to Crio Platform</li>
 							</ul>
 						</div>
 					</div>
@@ -86,11 +92,11 @@
 							target="_blank"
 							data-bs-toggle="collapse"
 							role="button"
-							href="#why-js">
+							href="#expressions">
 							<section class="link-card-bg">
 								<section class="link-card">
 									<article class="link-card-text">
-										<p><strong>Why JavaScript ?</strong></p>
+										<p><strong>Whar is Expressions ?</strong></p>
 										<p></p>
 									</article>
 								</section>
@@ -101,11 +107,11 @@
 							target="_blank"
 							data-bs-toggle="collapse"
 							role="button"
-							href="#CnE">
+							href="#operators">
 							<section class="link-card-bg">
 								<section class="link-card">
 									<article class="link-card-text">
-										<p><strong>Compilation and Execution</strong></p>
+										<p><strong>Math Operators</strong></p>
 										<p></p>
 									</article>
 								</section>
@@ -116,11 +122,11 @@
 							target="_blank"
 							data-bs-toggle="collapse"
 							role="button"
-							href="#first_prog">
+							href="#rel_con">
 							<section class="link-card-bg">
 								<section class="link-card">
 									<article class="link-card-text">
-										<p><strong>First Program</strong></p>
+										<p><strong>Logical & Relational Operators</strong></p>
 										<p></p>
 									</article>
 								</section>
@@ -131,11 +137,26 @@
 							target="_blank"
 							data-bs-toggle="collapse"
 							role="button"
-							href="#data_types">
+							href="#if_else">
 							<section class="link-card-bg">
 								<section class="link-card">
 									<article class="link-card-text">
-										<p><strong>Data Types</strong></p>
+										<p><strong>If-Else (intro)</strong></p>
+										<p></p>
+									</article>
+								</section>
+							</section>
+						</div>
+
+						<div
+							target="_blank"
+							data-bs-toggle="collapse"
+							role="button"
+							href="#js-function">
+							<section class="link-card-bg">
+								<section class="link-card">
+									<article class="link-card-text">
+										<p><strong>JS Functions (Intro)</strong></p>
 										<p></p>
 									</article>
 								</section>
@@ -150,7 +171,7 @@
 							<section class="link-card-bg">
 								<section class="link-card">
 									<article class="link-card-text">
-										<p><strong>Variables</strong></p>
+										<p><strong>Intro to Crio PF</strong></p>
 										<p></p>
 									</article>
 								</section>
@@ -160,116 +181,512 @@
 				</section>
 
 				<!-- Toggle Section -->
-				<!-- Why JavaScript ? -->
-				<div class="collapse" id="why-js">
+				<!-- Expressions in JavaScript ? -->
+				<div class="collapse mt-2" id="expressions">
 					<div class="card card-body">
 						<ul>
-							<li>Used for Creating Web Pages</li>
-							<li>Adding behaviour and special effects to the Webpages</li>
-							<li>Implementing complex features on web pages</li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- Compilation and Execution ? -->
-				<div class="collapse" id="CnE">
-					<div class="card card-body">
-						<ul>
-							<li>We can use any Code editor or Online IDE</li>
 							<li>
-								We don't need any Compiler for JS, All Web browser can run
-								JavaScript Programs
+								Expressions always result in
+								<b>a Singel value and are questions / statement</b> that
+								JavaScript can answer.
 							</li>
-							<li>Single-Pass Interpreter Language</li>
+							<li>
+								Expression is a combinations of
+								<b>literals, variables, operators & other Simple expressions</b>
+							</li>
+							<li>Ex.: console.log(2+2)</li>
+							<li>We ask JavaScript 2+2 = ?, and it answers with 4</li>
+							<li>
+								To form an expression or statement, we can use <b>Operators</b>
+							</li>
 						</ul>
 					</div>
 				</div>
 
-				<!-- First Program -->
-				<div class="collapse m-2" id="first_prog">
+				<!-- Arithmatic Operators -->
+				<div class="collapse mt-2" id="operators">
 					<div class="card card-body">
 						<ul>
-							<li>Printing First Program using JS</li>
-							<li>Using "console.log()"</li>
-							<li>console.log("First Program")</li>
+							<li>B => Brackets <b>(...)</b></li>
+							<li>A => Addition <b>(+)</b></li>
+							<li>S => Subtraction <b>(-)</b></li>
+							<li>M => Multiplication <b>(*)</b></li>
+							<li>D => Division <b>(/)</b></li>
+							<li>R => Modulus (Reminder) <b>(%)</b></li>
 						</ul>
-					</div>
-				</div>
 
-				<!-- Data Types in JS -->
-				<div class="collapse" id="data_types">
-					<div class="card card-body">
-						<img src="../assets/datatypes_js.png" alt="" />
+						<b>Precendence (Order of evaluation)</b>
+						<code>
+							<b> B DMR AS </b>
+						</code>
+
+						<h6>
+							Note : In case they belong to
+							<b>same category, follow order from left to right</b>
+						</h6>
 
 						<div>
 							<h5
 								class="btn btn-success"
 								data-bs-toggle="collapse"
 								role="button"
-								href="#ex-data-type">
-								Example :
+								href="#eval_exprssns">
+								Evaluate some Expressions
 							</h5>
-							<div class="collapse" id="ex-data-type">
-								<div class="card card-body p-0">
-									<img src="../assets/datatype_ex.webp" alt="" />
+							<div class="collapse" id="eval_exprssns">
+								<div class="card card-body">
+									<ul>
+										<li>
+											console.log(2 + 2)
+											<code>// OP: 4 (typeof => Number)</code>
+										</li>
+										<li>
+											console.log(5 * 15)
+											<code>// OP: 75 (typeof => Number)</code>
+										</li>
+										<li>
+											console.log(10 % 2)
+											<code>// OP: 0 (typeof => Number)</code>
+										</li>
+										<li>
+											console.log(19 - 29)
+											<code>// OP: -10 (typeof => Number)</code>
+										</li>
+										<li>
+											console.log('Java' + 'Script')
+											<code>// OP: "JavaScript" (typeof => String)</code>
+										</li>
+										<li>
+											console.log('JS' / 4)
+											<code>// OP: NaN (typeof => Number) <b>What ?</b></code>
+											<a
+												href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"
+												class="text-info"
+												target="_blank"
+												>Read about it here...</a
+											>
+										</li>
+										<li>
+											console.log(3 + 10 * 2)
+											<code>// OP: 23 (typeof => Number)</code>
+										</li>
+										<li>
+											console.log((3 + 10) * 2)
+											<code>// OP: 26 (typeof => Number)</code>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-
-						<div>
-							<h5
-								class="btn btn-success"
-								data-bs-toggle="collapse"
-								role="button"
-								href="#null_undefined">
-								null Vs undefined
-							</h5>
-							<div class="collapse" id="null_undefined">
-								<div class="card card-body p-0">
-									<img src="../assets/null_vs_undefined.png" alt="" />
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Variables in JS -->
-				<div class="collapse" id="vars">
-					<div class="card card-body">
-						<ul>
-							<li>
-								What is we need to Store a value or a data ? We need some
-								container like space.
-							</li>
-							<li>
-								There is where
-								<span class="bg-warning text-dark"
-									><strong>Variables</strong></span
-								>
-								comes into picture
-							</li>
-							<li>
-								These are named containers used to
-								<strong>Store, Change and access</strong> data from it.
-							</li>
-							<li>
-								What we need here is,
-								<span class="bg-warning text-dark"
-									><strong
-										>Initialization => Declaration + Assignment</strong
-									></span
-								>
-							</li>
-							<img src="../assets/var_containers.png" alt="" class="pt-2" />
-						</ul>
 
 						<a
-							href="../modules/js-variables.html"
-							class="btn btn-success text-light"
+							href="https://www.w3schools.com/js/js_arithmetic.asp"
+							class="text-info"
 							target="_blank"
-							>Learn More about JS Variables</a
+							>For More...</a
 						>
 					</div>
+				</div>
+
+				<!-- Logical & Relational Operators -->
+				<div class="collapse mt-2" id="rel_con">
+					<div class="card card-body">
+						<!-- Relational Operators -->
+						<div>
+							<h5
+								class="btn btn-success"
+								data-bs-toggle="collapse"
+								role="button"
+								href="#rel_operators">
+								Relational Operators
+							</h5>
+							<div class="collapse mt-2" id="rel_operators">
+								<div class="card card-body">
+									<ul>
+										<li>
+											What if we're given two numbers and suppose to chech which
+											number is Greater ?
+										</li>
+										<li>
+											To check relationship between two primitive or variables,
+											we useOperators
+											<b>relationship operators</b>
+										</li>
+										<ul>
+											<li>Greater than <b>( > )</b></li>
+											<li>Less Than <b>( < )</b></li>
+											<li>Greater than or equal to <b>( >= )</b></li>
+											<li>Less than or equal to <b>( <= )</b></li>
+											<li>Equal to <b>( == )</b></li>
+											<li>Strictly Equal to <b>( === )</b></li>
+											<li>Not Equal to <b>( !== )</b></li>
+											<li>Not <b>( ! )</b></li>
+										</ul>
+									</ul>
+
+									<div>
+										<h5
+											class="btn btn-success"
+											data-bs-toggle="collapse"
+											role="button"
+											href="#rel_check">
+											Check some relationships
+										</h5>
+										<div class="collapse" id="rel_check">
+											<div class="card card-body">
+												<ul>
+													<b>Ex.: let a = 10; let b = 20; </b>
+													<li>
+														console.log(a >= b)
+														<code>// OP: false (typeof => Boolean)</code>
+													</li>
+													<li>
+														console.log(a <= b)
+														<code>// OP: true (typeof => Boolean)</code>
+													</li>
+													<li>
+														console.log(a != b)
+														<code>// OP: true (typeof => Boolean)</code>
+													</li>
+													<li>
+														console.log( a == b)
+														<code>// OP: false (typeof => Boolean)</code>
+													</li>
+													<li>
+														console.log( a === b)
+														<code>// OP: false (typeof => Boolean)</code>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Logical Operators -->
+						<div>
+							<h5
+								class="btn btn-success"
+								data-bs-toggle="collapse"
+								role="button"
+								href="#con_operators">
+								Logical Operators
+							</h5>
+							<div class="collapse mt-2" id="con_operators">
+								<div class="card card-body">
+									<ul>
+										<li>
+											What if We want to compare
+											<b>One or more Conditions</b> and make a decision
+										</li>
+										<li>
+											<b>AND (&&)</b> -> Returns true only if
+											<b>both conditions are true</b>
+										</li>
+										<li>
+											<b>OR ( || )</b> -> Returns true if
+											<b>any condition evaluates to be true</b>
+										</li>
+
+										<li><b>let a = 10; let b = 20;</b></li>
+										<ul>
+											<li>
+												console.log( a !== b && a > b );
+												<p class="text-info">// OP: false</p>
+											</li>
+											<li>
+												console.log( a !== b || a > b );
+												<p class="text-info">// OP: true</p>
+											</li>
+										</ul>
+									</ul>
+
+									<div>
+										<h5
+											class="btn btn-success"
+											data-bs-toggle="collapse"
+											role="button"
+											href="#rel_check">
+											Let's understand
+										</h5>
+										<div class="collapse" id="rel_check">
+											<div class="container card-body">
+												<img
+													src="../assets/logical_table.png"
+													alt=""
+													height="200"
+													width="500" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Truthy & Falsy Values in JS -->
+						<div>
+							<h5
+								class="btn btn-success"
+								data-bs-toggle="collapse"
+								role="button"
+								href="#truthy_falsy">
+								Truthy & Falsy in JS
+							</h5>
+							<div class="collapse mt-2" id="truthy_falsy">
+								<div class="card card-body">
+									<ul>
+										<li>
+											When non-boolean values are used in a boolean context,
+											such as <code>if</code> statements
+										</li>
+										<ul>
+											<li>
+												There will be coerced into
+												<span class="text-info">either true or false</span>
+											</li>
+											<li>
+												Values that are coerced into true, are called
+												<code>truthy</code>
+											</li>
+											<li>
+												Values that are coerced into false, are called
+												<code>falsy</code>
+											</li>
+										</ul>
+										<li>
+											In JavaScript, there a <code>Six</code> falsy values.
+										</li>
+										<ul>
+											<li><code>false</code></li>
+											<li><code>0, -0 and 0n (zero of n)</code></li>
+											<li><code>'' and "" </code>(Empty String)</li>
+											<li><code>null, undefined and NaN</code></li>
+											<li><code>document.all</code></li>
+										</ul>
+
+										<li><b>All other values</b> are truthy</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- If-Else -->
+				<div class="collapse mt-2" id="if_else">
+					<div class="card card-body">
+						<ul>
+							<li>
+								What if, we had to test a condition and then do a task or print
+								something.
+							</li>
+							<li>
+								To impose and check a condition we, we can use
+								<b>"if"</b> statement
+							</li>
+							<li>
+								<b>Syntax -</b>
+								<code class="align-items-start">
+									<code
+										>if (condition) { // if condition is true, then do this }
+									</code>
+								</code>
+							</li>
+						</ul>
+
+						<div class="d-flex m-0">
+							<div class="mx-2">
+								<h5
+									class="btn btn-success"
+									data-bs-toggle="collapse"
+									role="button"
+									href="#if_stmt">
+									If - Statement
+								</h5>
+								<div class="collapse" id="if_stmt">
+									<div class="card card-body">
+										<ul>
+											<li>When we want to check for Only one condition</li>
+											<li>
+												And about to perform a specific task, We can us
+												if-statement
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="mx-2">
+								<h5
+									class="btn btn-success"
+									data-bs-toggle="collapse"
+									role="button"
+									href="#if-else-stmt">
+									if-else Statement
+								</h5>
+								<div class="collapse" id="if-else-stmt">
+									<div class="card card-body">
+										<ul>
+											<li>
+												When we have evaluate a condition, and if it get true
+												We'll perform a task
+											</li>
+											<li>
+												If it gets false, We supposed to be perform a different
+												task
+											</li>
+											<li>We can use <code>else</code> block.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="mx-2">
+								<h5
+									class="btn btn-success"
+									data-bs-toggle="collapse"
+									role="button"
+									href="#if-else-if">
+									if-else-if Statement
+								</h5>
+								<div class="collapse" id="if-else-if">
+									<div class="card card-body">
+										<ul>
+											<li>
+												When we're having multiple conditions, and evaluate them
+												to be true or not
+											</li>
+											<li>
+												To perform some tasks, we can use
+												<code>if-else-if</code> code statements
+											</li>
+											<li>
+												The final <code>else</code> block will evaluate with
+												final left over condition.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mx-2">
+							<h5
+								class="btn btn-success"
+								data-bs-toggle="collapse"
+								role="button"
+								href="#if-else-activity">
+								Activity
+							</h5>
+							<div class="collapse" id="if-else-activity">
+								<div class="card card-body">
+									<ul>
+										<li>Given an age variable: <code>var age = 16;</code></li>
+										<li>
+											Print <b>"Can drive</b> if the age is greater than 18
+										</li>
+										<li>Print <b>"Cannot drive"</b> otherwise</li>
+										<li>Use the <code>if-else</code> block</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- JS Functions -->
+				<div class="collapse mt-2" id="js-function">
+					<div class="card card-body">
+						<ul>
+							<li>What if we want to <b>perform a task frequently</b></li>
+							<li>We dont't have to repeat the particular code in our file.</li>
+							<li>
+								In JavaScript, we can devide our code into
+								<b>re-usable parts</b> called <code>functions</code>
+							</li>
+							<li>
+								We can call these functions, by its name <b>at any-point</b> in
+								our code
+							</li>
+						</ul>
+
+						<div class="mx-2">
+							<h5
+								class="btn btn-success"
+								data-bs-toggle="collapse"
+								role="button"
+								href="#funct-def">
+								Function Definition
+							</h5>
+
+							<h5
+								class="btn btn-success"
+								data-bs-toggle="collapse"
+								role="button"
+								href="#funct-call">
+								Function Call
+							</h5>
+						</div>
+
+						<div class="collapse" id="funct-def">
+							<div class="card card-body">
+								<ul>
+									<li>
+										<code>function functName () { // do something }</code>
+									</li>
+									<li><code>const myFunct =()=> {}</code> // ES6</li>
+								</ul>
+							</div>
+						</div>
+						<div class="collapse" id="funct-call">
+							<div class="card card-body">
+								<ul>
+									<li>
+										Just write the function's name, at where ever you want in
+										your code
+									</li>
+									<li><code>myFunct()</code> or <code>functName()</code></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="mx-2">
+							<h5
+								class="btn btn-success"
+								data-bs-toggle="collapse"
+								role="button"
+								href="#funct-activity">
+								Activity
+							</h5>
+
+							<div class="collapse" id="funct-activity">
+								<div class="card card-body">
+									<ul>
+										<li>
+											Write a function <code>myName()</code> that prints your
+											full name to the console once.
+										</li>
+										<li>
+											Call this function 3 times and see the result in console.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="text-info">
+							<a href="../modules/function-types.html" target="_blank"
+								>Read more about Types of Function, Parameters & Arguments,
+								etc</a
+							>
+						</div>
+					</div>
+				</div>
+
+				<!-- Crio PF Intro -->
+				<div class="collapse mt-2" id="vars">
+					<div class="card card-body"></div>
 				</div>
 			</div>
 		</div>

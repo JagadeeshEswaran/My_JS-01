@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Landing Page -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DSA - JS</title>
+		<link rel="stylesheet" href="../style.css" />
+
+		<!-- Bootstrap Styles Plugin -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+			crossorigin="anonymous" />
+	</head>
+
+	<body class="">
+		<!-- Navbar - Bootsrap -->
+		<nav
+			class="navbar navbar-expand-sm sticky-top border-bottom border-light-subtle">
+			<div class="container-fluid px-0 mx-2">
+				<a
+					href="https://crio-4me.jagadeeshwar.net"
+					class="navbar-brand h1"
+					style="margin-left: 1rem"
+					>Crio.Do 4 Me</a
+				>
+
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#togglerTargetNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div
+					class="collapse navbar-collapse justify-content-sm-center"
+					id="togglerTargetNavbar"
+					style="margin-left: 1rem">
+					<ul class="navbar-nav">
+						<li class="navbar-item"><a href="#" class="nav-link">Home</a></li>
+						<li class="navbar-item">
+							<a href="" class="nav-link">Explore</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="navbar-item">
+					<a href="https://profile.jagadeeshwar.net" class="nav-divnk"
+						>View Profile</a
+					>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container mt-5">
+			<h3>Type of Functions</h3>
+
+			<div class="d-flex">
+				<div class="mx-2">
+					<h5
+						class="btn btn-success"
+						data-bs-toggle="collapse"
+						role="button"
+						href="#non-param">
+						Non-Parametric Functions
+					</h5>
+				</div>
+
+				<div class="mx-2">
+					<h5
+						class="btn btn-success"
+						data-bs-toggle="collapse"
+						role="button"
+						href="#param-funct">
+						Parametric Functions
+					</h5>
+				</div>
+
+				<div class="mx-2">
+					<h5
+						class="btn btn-success"
+						data-bs-toggle="collapse"
+						role="button"
+						href="#return-funct">
+						Return Values
+					</h5>
+				</div>
+			</div>
+
+			<!-- Non-Parametric Function -->
+			<div class="collapse" id="non-param">
+				<div class="card card-body">
+					<ul>
+						<li>
+							If want to do only a certain task with a function, we can call a
+							function
+						</li>
+						<li>We won't change and functionality not giving any input.</li>
+						<li>These are called <b>non-parametric functions</b></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Parametric Function -->
+			<div class="collapse" id="param-funct">
+				<div class="card card-body">
+					<ul>
+						<li>
+							What if, a bank's system needs to send a
+							<b>personalized message</b> to its individual customers.
+						</li>
+						<li>
+							We can send values or parameters as an <code>Argument</code> at
+							function call (like Person's name, age, location, etc)
+						</li>
+						<li>
+							Our function will receive these Arguments as
+							<code>Parameters</code> and perform a certain task.
+						</li>
+						<li>
+							We can give <b>multiple Arguments or Parameters</b> to a function
+						</li>
+						<li>But try to follow <b>S.O.L.I.D Principles</b></li>
+					</ul>
+
+					<div class="mx-2">
+						<h5
+							class="btn btn-success"
+							data-bs-toggle="collapse"
+							role="button"
+							href="#funct-def">
+							Function Definition
+						</h5>
+
+						<h5
+							class="btn btn-success"
+							data-bs-toggle="collapse"
+							role="button"
+							href="#funct-call">
+							Function Call
+						</h5>
+					</div>
+
+					<div class="collapse" id="funct-def">
+						<div class="card card-body">
+							<code>
+								function myFunct(name) { console.log("Hello, " + name); }
+							</code>
+
+							<code class="text-info-emphasis">
+								// Here the function "myFunct" is taking a parameter called
+								"name" and printing the "Hello, 'name' " on the console.
+							</code>
+						</div>
+					</div>
+					<div class="collapse" id="funct-call">
+						<div class="card card-body">
+							<ul>
+								<li>
+									Just give your name as an Argument inside the paranthesis
+								</li>
+								<li>
+									<code>myFunct("Jagadeesh")</code> or
+									<code>functName("Jagadeesh")</code>
+								</li>
+
+								<code class="text-info-emphasis"
+									>// Final OP : "Hello, Jagadeesh"</code
+								>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Parametric Function -->
+			<div class="collapse" id="return-funct">
+				<div class="card card-body">
+					<ul>
+						<li>We can pass values into a function with Arguments</li>
+						<li>
+							We can alse use <code>return</code> statement to send a value back
+							or out of a function
+						</li>
+
+						<img
+							src="../assets/return.png"
+							alt=""
+							height="150"
+							width="500"
+							class="mt-3" />
+
+						<li>
+							If no return value is specified, JS will return
+							<code>undefined</code>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<footer class="fixed-bottom bg-info-subtle">
+			<div>© Jagadeeshwaran Eswaran | 2023</div>
+		</footer>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"></script>
+	</body>
+</html>
